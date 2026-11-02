@@ -1,6 +1,6 @@
 # Klausur-Modus: Plan
 
-Status: **Entwurf, wartet auf Freigabe.** Laut `AGENTS.md` beginnt die Umsetzung erst nach Freigabe des Plans. Die offenen Fragen unten werden vorher in den jeweiligen Issues entschieden.
+Status: **Design entschieden (#1), wartet auf Freigabe des Plans.** Laut `AGENTS.md` beginnt die Umsetzung erst nach Freigabe.
 
 Bezug upstream: [#443 Exam prep vs. full mastery](https://github.com/amosblomqvist/learnharness/issues/443), [#71 Multiple graphs](https://github.com/amosblomqvist/learnharness/issues/71).
 
@@ -67,16 +67,18 @@ Der Milestone „Klausur-Modus v1“ fasst alles zusammen. Die Reihenfolge entsp
 8. Übergang „Schwachstellen üben“ → Practice
 9. Tests, Doku, Upstream-PR
 
-## Offene Design-Fragen (vor der Umsetzung zu entscheiden)
+## Detail-Entscheidungen (aus #1)
 
-- **Länge:** Wird die Bearbeitungszeit aus der Altklausur übernommen, beim Start gewählt oder beides (Vorschlag aus der Altklausur, änderbar)?
-- **Teil-Klausuren:** Kann man auf einzelne Themen einschränken („nur Berechenbarkeit“), oder entsteht immer eine vollständige Klausur?
-- **Modelle:** Welcher Slot erstellt die Klausur (Strong?), welcher korrigiert Fotos (Vision oder Strong, sofern bildfähig)?
-- **Fotos:** Mehrere Fotos pro Aufgabe? Ein Sammel-Upload mit Zuordnung durch das Modell?
-- **Nachfragen:** Darf man nach der Korrektur über einzelne Punkte diskutieren (Chat in der Klausur-Session)?
-- **Sprache:** Richtet sich die Klausursprache nach dem Material (deutsche Altklausur → deutsche Klausur)? Bleibt die UI wie der Rest der App auf Englisch?
-- **Wiederholung:** Kann man dieselbe Probeklausur später erneut schreiben?
-- **Ohne Altklausur:** Was passiert, wenn ein Modul keine Altklausur hat (Stil nur aus Übungen ableiten oder Hinweis)?
+| Thema | Entscheidung | Betrifft |
+|---|---|---|
+| Länge | Die Bearbeitungszeit wird aus der Altklausur vorgeschlagen und kann vor dem Start geändert werden | #5, #6 |
+| Teil-Klausuren | Standard ist die vollständige Klausur. Optional kann man beim Start Themen angeben („nur Berechenbarkeit“), dann werden Umfang und Zeit angepasst | #5, #6 |
+| Modelle | Erstellung und Korrektur laufen über den Strong-Slot. Vor dem Start wird geprüft, ob das Modell Bilder verarbeiten kann, sonst kommt ein klarer Hinweis | #4, #5, #7 |
+| Fotos | Mehrere Fotos pro Aufgabe, eindeutig zugeordnet | #6, #7 |
+| Nachfragen | Nach der Korrektur kann man in der Klausur-Session nachfragen. Das Modell darf Punkte begründet anpassen, jede Änderung wird mit Begründung vermerkt | #7 |
+| Sprache | Aufgaben und Feedback in der Sprache des Materials, UI auf Englisch wie der Rest der App | #3, #5, #6 |
+| Wiederholen | „Retake“ legt eine neue Klausur-Session mit demselben Blatt an. Das alte Ergebnis bleibt zum Vergleich erhalten | #4, #7 |
+| Ohne Altklausur | Vor dem Start erscheint ein Hinweis, dass der Stil geschätzt wird. Die Klausur orientiert sich dann an den Übungsblättern | #5, #6 |
 
 ## Nicht im Umfang von v1
 
